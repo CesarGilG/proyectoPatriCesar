@@ -1,17 +1,17 @@
 export class movie{
-    private title:string;
-    private releaseYear:number;
-    private actors:string[];
-    private nacionality:string;
-    private director:string;
-    private writer:string;
-    private language:string;
-    private plataform:string;
-    private isMCU:boolean;
-    private mainCharacterName:string;
-    private producer:string;
-    private distributor:string;
-    private genre:string;
+    public title:string;
+    public releaseYear:number;
+    public actors:string[];
+    public nacionality:string;
+    public director:string;
+    public writer:string;
+    public language:string;
+    public plataform:string;
+    public isMCU:boolean;
+    public mainCharacterName:string;
+    public producer:string;
+    public distributor:string;
+    public genre:string;
 
     constructor(title:string,releaseYear:number,nacionality:string,genre:string){
         this.title = title;
@@ -119,11 +119,9 @@ export class movie{
             this.genre = genero
         }
         toPrint(){
-            let actores:string = ""
-            this.actors.forEach(element => actores = actores + (" " + element))
             console.log( "\n" + "Título: " + this.title + "\n" +
             "Año: " + this.releaseYear + "\n"+
-            "Actores: " + actores + "\n"+
+            "Actores: " + this.actors + "\n"+
             "País: " + this.nacionality + "\n" +
             "Dirigida por: " + this.director + "\n" +
             "Escrita por: " + this.writer + "\n" +

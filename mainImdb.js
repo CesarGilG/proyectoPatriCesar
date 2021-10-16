@@ -34,3 +34,4 @@ movie3.setProducer("Dede Gardner");
 movie3.setDistributor("Paramount Pictures");
 var imdb1 = new Imdb_1.Imdb([movie1, movie2, movie3]);
 console.log(imdb1);
+imdb1.showMovies();
