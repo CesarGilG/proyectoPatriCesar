@@ -38,4 +38,10 @@ movie3.setDistributor("Paramount Pictures")
 
 let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
 
-imdb1.showMovie()
+// imdb1.showMovie()
+
+const fs =require('fs')
+
+fs.writeFileSync('./imdbBBDD.json', JSON.stringify(imdb1));
+  
+  
