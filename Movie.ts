@@ -121,7 +121,7 @@ export class movie{
         toPrint(){
             let actores:string = ""
             this.actors.forEach(element => actores = actores + (" " + element))
-            console.log("Título: " + this.title + "\n" +
+            console.log( "\n" + "Título: " + this.title + "\n" +
             "Año: " + this.releaseYear + "\n"+
             "Actores: " + actores + "\n"+
             "País: " + this.nacionality + "\n" +

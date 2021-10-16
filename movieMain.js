@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var movie_1 = require("./movie");
+var Imdb_1 = require("./Imdb");
 var movie1 = new movie_1.movie("The wolf of Wall Street", 2013, "U.S", "comedy");
 movie1.setActors(["Leonardo DiCaprio", " Margot Robie"]);
 movie1.setDirector("Martin Scorsese");
@@ -31,6 +32,5 @@ movie3.setIsMCU(false);
 movie3.setMainCharacterName("Michael Burry");
 movie3.setProducer("Dede Gardner");
 movie3.setDistributor("Paramount Pictures");
-console.log(movie1);
-console.log(movie2);
-console.log(movie3);
+var listPelis = new Imdb_1.Imdb([movie1, movie2, movie3]);
+listPelis.showMovies();

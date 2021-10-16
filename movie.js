@@ -110,7 +110,7 @@ var movie = /** @class */ (function () {
     movie.prototype.toPrint = function () {
         var actores = "";
         this.actors.forEach(function (element) { return actores = actores + (" " + element); });
-        console.log("Título: " + this.title + "\n" +
+        console.log("\n" + "Título: " + this.title + "\n" +
             "Año: " + this.releaseYear + "\n" +
             "Actores: " + actores + "\n" +
             "País: " + this.nacionality + "\n" +

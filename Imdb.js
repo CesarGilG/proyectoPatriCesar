@@ -5,6 +5,9 @@ var Imdb = /** @class */ (function () {
     function Imdb(peliculas) {
         this.peliculas = peliculas;
     }
+    Imdb.prototype.showMovies = function () {
+        this.peliculas.forEach(function (pelicula) { return pelicula.toPrint() + "\n" + "---------------------------------------" + ".\n"; });
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;
