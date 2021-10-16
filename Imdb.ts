@@ -14,4 +14,10 @@ printMovies(){
 showMovie(){
     this.peliculas.forEach(pelicula => console.log(pelicula))
 }
+length():number{
+    return this.peliculas.length
 }
+
+}
+
+

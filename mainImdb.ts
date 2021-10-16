@@ -1,8 +1,10 @@
+//import * as fs from "fs"
+
 import {movie} from "./movie"
 import {Imdb} from "./Imdb"
 
 let movie1: movie = new movie ("The wolf of Wall Street",2013,"U.S","comedy")
-movie1.setActors(["Leonardo DiCaprio"," Margot Robie"])
+movie1.setActors(["eonardo DiCaprio"," Margot Robie"])
 movie1.setDirector("Martin Scorsese")
 movie1.setWriter("Terence Winter")
 movie1.setLanguage("English")
@@ -38,4 +40,10 @@ movie3.setDistributor("Paramount Pictures")
 
 let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
 
-imdb1.showMovie()
+
+const fs =require('fs')
+
+fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
+
+
+

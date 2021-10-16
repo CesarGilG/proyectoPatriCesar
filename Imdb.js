@@ -11,6 +11,9 @@ var Imdb = /** @class */ (function () {
     Imdb.prototype.showMovie = function () {
         this.peliculas.forEach(function (pelicula) { return console.log(pelicula); });
     };
+    Imdb.prototype.length = function () {
+        return this.peliculas.length;
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;
