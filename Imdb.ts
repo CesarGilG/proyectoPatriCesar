@@ -7,8 +7,11 @@ constructor(peliculas)
 {
     this.peliculas = peliculas
 }
-showMovies(){
+printMovies(){
     this.peliculas.forEach(pelicula => pelicula.toPrint())
 }
 
+showMovie(){
+    this.peliculas.forEach(pelicula => console.log(pelicula))
+}
 }

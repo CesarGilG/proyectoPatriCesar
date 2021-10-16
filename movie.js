@@ -108,8 +108,6 @@ var movie = /** @class */ (function () {
         this.genre = genero;
     };
     movie.prototype.toPrint = function () {
-        // let actores:string = ""
-        // this.actors.forEach(element => actores = actores + (" " + element))
         console.log("\n" + "Título: " + this.title + "\n" +
             "Año: " + this.releaseYear + "\n" +
             "Actores: " + this.actors + "\n" +

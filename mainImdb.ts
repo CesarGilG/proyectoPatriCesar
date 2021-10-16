@@ -38,5 +38,4 @@ movie3.setDistributor("Paramount Pictures")
 
 let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
 
-console.log(imdb1)
-imdb1.showMovies();
+imdb1.showMovie()

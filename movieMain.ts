@@ -1,5 +1,4 @@
 import {movie} from "./movie"
-import {Imdb} from "./Imdb"
 
 
 let movie1: movie = new movie ("The wolf of Wall Street",2013,"U.S","comedy")
@@ -38,7 +37,5 @@ movie3.setProducer("Dede Gardner")
 movie3.setDistributor("Paramount Pictures")
 
 
-let listPelis = new Imdb([movie1,movie2,movie3]);
-
-listPelis.showMovies();
-
+console.log(movie1)
+movie1.toPrint();

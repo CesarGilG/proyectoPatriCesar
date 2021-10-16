@@ -5,8 +5,11 @@ var Imdb = /** @class */ (function () {
     function Imdb(peliculas) {
         this.peliculas = peliculas;
     }
-    Imdb.prototype.showMovies = function () {
+    Imdb.prototype.printMovies = function () {
         this.peliculas.forEach(function (pelicula) { return pelicula.toPrint(); });
+    };
+    Imdb.prototype.showMovie = function () {
+        this.peliculas.forEach(function (pelicula) { return console.log(pelicula); });
     };
     return Imdb;
 }());
