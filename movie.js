@@ -7,6 +7,14 @@ var movie = /** @class */ (function () {
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
         this.genre = genre;
+        this.actors = [];
+        this.director = "";
+        this.writer = "";
+        this.language = "";
+        this.plataform = "";
+        this.mainCharacterName = "";
+        this.producer = "";
+        this.distributor = "";
     }
     movie.prototype.getTitle = function () {
         return this.title;
@@ -62,6 +70,16 @@ var movie = /** @class */ (function () {
     movie.prototype.getIsMCU = function () {
         return this.isMCU;
     };
+    movie.prototype.IsMCUasString = function () {
+        var resultado = "";
+        if (this.isMCU === true) {
+            resultado = "Si";
+        }
+        else {
+            resultado = "No";
+        }
+        return resultado;
+    };
     movie.prototype.setIsMCU = function (marvel) {
         this.isMCU = marvel;
     };
@@ -88,6 +106,23 @@ var movie = /** @class */ (function () {
     };
     movie.prototype.setGenre = function (genero) {
         this.genre = genero;
+    };
+    movie.prototype.toPrint = function () {
+        var actores = "";
+        this.actors.forEach(function (element) { return actores = actores + (" " + element); });
+        console.log("Título: " + this.title + "\n" +
+            "Año: " + this.releaseYear + "\n" +
+            "Actores: " + actores + "\n" +
+            "País: " + this.nacionality + "\n" +
+            "Dirigida por: " + this.director + "\n" +
+            "Escrita por: " + this.writer + "\n" +
+            "Idioma: " + this.language + "\n" +
+            "Plataforma: " + this.plataform + "\n" +
+            "Es del Universo Marvel: " + this.IsMCUasString() + "\n" +
+            "Personaje principal: " + this.mainCharacterName + "\n" +
+            "Producida por: " + this.producer + "\n" +
+            "Distribuída por: " + this.distributor + "\n" +
+            "Género: " + this.genre);
     };
     return movie;
 }());

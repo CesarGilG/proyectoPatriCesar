@@ -18,7 +18,15 @@ export class movie{
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
         this.genre = genre;
-    }
+        this.actors = [];
+        this.director = "";
+        this.writer = "";
+        this.language = "";
+        this.plataform = "";
+        this.mainCharacterName = "";
+        this.producer = "";
+        this.distributor = "";
+}
 
         getTitle():string{
             return this.title
@@ -74,6 +82,15 @@ export class movie{
         getIsMCU():boolean{
             return this.isMCU
         }
+        IsMCUasString():string{
+            let resultado:string = "";
+            if (this.isMCU === true){
+                resultado = "Si"
+            }else{
+                resultado = "No"
+            }
+            return resultado
+        }
         setIsMCU(marvel:boolean){
             this.isMCU = marvel
         }
@@ -101,5 +118,21 @@ export class movie{
         setGenre(genero:string){
             this.genre = genero
         }
-         
+        toPrint(){
+            let actores:string = ""
+            this.actors.forEach(element => actores = actores + (" " + element))
+            console.log("Título: " + this.title + "\n" +
+            "Año: " + this.releaseYear + "\n"+
+            "Actores: " + actores + "\n"+
+            "País: " + this.nacionality + "\n" +
+            "Dirigida por: " + this.director + "\n" +
+            "Escrita por: " + this.writer + "\n" +
+            "Idioma: " + this.language + "\n" +
+            "Plataforma: " + this.plataform + "\n" +
+            "Es del Universo Marvel: " + this.IsMCUasString() + "\n" +
+            "Personaje principal: " + this.mainCharacterName + "\n" + 
+            "Producida por: " + this.producer + "\n" +
+            "Distribuída por: " + this.distributor + "\n" +
+            "Género: " + this.genre);
+        }
 }
