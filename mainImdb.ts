@@ -44,7 +44,7 @@ const fs =require('fs')
 
 // fs.writeFileSync('./imdbBBDD.json', JSON.stringify(imdb1));
   
-fs.writeFileSync("./imdb2.json",JSON.stringify(imdb1));
+// fs.writeFileSync("./imdb2.json",JSON.stringify(imdb1));
 
 
 let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
