@@ -1,4 +1,5 @@
 "use strict";
+//import * as fs from "fs"
 exports.__esModule = true;
 var movie_1 = require("./movie");
 var Imdb_1 = require("./Imdb");
@@ -33,8 +34,17 @@ movie3.setMainCharacterName("Michael Burry");
 movie3.setProducer("Dede Gardner");
 movie3.setDistributor("Paramount Pictures");
 var imdb1 = new Imdb_1.Imdb([movie1, movie2, movie3]);
+<<<<<<< HEAD
 // imdb1.showMovie()
 // let imdbjson=JSON.stringify(imdb1)
 // console.log(imdbjson)
 var fs = require('fs');
 fs.writeFileSync('./imdbBBDD.json', JSON.stringify(JSON.stringify(imdb1)));
+=======
+var fs = require('fs');
+fs.writeFileSync("./imdb.json", JSON.stringify(imdb1));
+var lecturaFichero = new Imdb_1.Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+imdb1.printMovies();
+lecturaFichero.showMovie();
+// lecturaFichero.printMovies()
+>>>>>>> b0d64a73d8810e27a810de57de93160f1bb49c30

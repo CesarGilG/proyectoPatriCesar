@@ -1,7 +1,7 @@
 import {movie} from "./movie"
 
 
-let movie1: movie = new movie ("The wolf of Wall Street",2013,"U.S","comedy")
+let movie1:movie = new movie ("The wolf of Wall Street",2013,"U.S","comedy")
 movie1.setActors(["Leonardo DiCaprio"," Margot Robie"])
 movie1.setDirector("Martin Scorsese")
 movie1.setWriter("Terence Winter")

@@ -1,3 +1,5 @@
+//import * as fs from "fs"
+
 import {movie} from "./movie"
 import {Imdb} from "./Imdb"
 
@@ -38,6 +40,7 @@ movie3.setDistributor("Paramount Pictures")
 
 let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
 
+<<<<<<< HEAD
 // imdb1.showMovie()
 
 const fs =require('fs')
@@ -45,3 +48,19 @@ const fs =require('fs')
 fs.writeFileSync('./imdbBBDD.json', JSON.stringify(imdb1));
   
   
+=======
+
+const fs =require('fs')
+
+fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
+
+
+let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+
+
+
+imdb1.printMovies()
+lecturaFichero.showMovie()
+// lecturaFichero.printMovies() ¡¡¡¡¡esto falla!!!!
+
+>>>>>>> b0d64a73d8810e27a810de57de93160f1bb49c30
