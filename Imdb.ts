@@ -19,7 +19,7 @@ length():number{
 }
 escribirEnFicheroJSON(nombreFichero:string){
     const fs =require('fs')
-    fs.writeFileSync('./pruebaconpatri.json',JSON.stringify(this.peliculas));
+    fs.writeFileSync("./" + nombreFichero +".JSON",JSON.stringify(this.peliculas));
 }
 }
 
