@@ -4,7 +4,7 @@ exports.__esModule = true;
 var movie_1 = require("./movie");
 var Imdb_1 = require("./Imdb");
 var movie1 = new movie_1.movie("The wolf of Wall Street", 2013, "U.S", "comedy");
-movie1.setActors(["eonardo DiCaprio", " Margot Robie"]);
+movie1.setActors(["Leonardo DiCaprio", " Margot Robie"]);
 movie1.setDirector("Martin Scorsese");
 movie1.setWriter("Terence Winter");
 movie1.setLanguage("English");
@@ -36,3 +36,7 @@ movie3.setDistributor("Paramount Pictures");
 var imdb1 = new Imdb_1.Imdb([movie1, movie2, movie3]);
 var fs = require('fs');
 fs.writeFileSync("./imdb.json", JSON.stringify(imdb1));
+var lecturaFichero = new Imdb_1.Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+imdb1.printMovies();
+lecturaFichero.showMovie();
+// lecturaFichero.printMovies()

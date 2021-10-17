@@ -8,7 +8,7 @@ constructor(peliculas)
     this.peliculas = peliculas
 }
 printMovies(){
-    this.peliculas.forEach(pelicula => pelicula.toPrint())
+    this.peliculas.forEach(peliculilla => peliculilla.toPrint())
 }
 
 showMovie(){

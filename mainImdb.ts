@@ -4,7 +4,7 @@ import {movie} from "./movie"
 import {Imdb} from "./Imdb"
 
 let movie1: movie = new movie ("The wolf of Wall Street",2013,"U.S","comedy")
-movie1.setActors(["eonardo DiCaprio"," Margot Robie"])
+movie1.setActors(["Leonardo DiCaprio"," Margot Robie"])
 movie1.setDirector("Martin Scorsese")
 movie1.setWriter("Terence Winter")
 movie1.setLanguage("English")
@@ -46,4 +46,11 @@ const fs =require('fs')
 fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
 
 
+let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+
+
+
+imdb1.printMovies()
+lecturaFichero.showMovie()
+// lecturaFichero.printMovies() ¡¡¡¡¡esto falla!!!!
 
