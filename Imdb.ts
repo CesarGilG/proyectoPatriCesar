@@ -17,7 +17,10 @@ showMovie(){
 length():number{
     return this.peliculas.length
 }
-
+escribirEnFicheroJSON(nombreFichero:string){
+    const fs =require('fs')
+    fs.writeFileSync('./pruebaconpatri.json',JSON.stringify(this.peliculas));
+}
 }
 
 

@@ -14,6 +14,10 @@ var Imdb = /** @class */ (function () {
     Imdb.prototype.length = function () {
         return this.peliculas.length;
     };
+    Imdb.prototype.escribirEnFicheroJSON = function (nombreFichero) {
+        var fs = require('fs');
+        fs.writeFileSync('./pruebaconpatri.json', JSON.stringify(this.peliculas));
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;

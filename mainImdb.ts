@@ -48,9 +48,9 @@ fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
 
 let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
 
+lecturaFichero.escribirEnFicheroJSON("pruebafichero")
 
-
-imdb1.printMovies()
-lecturaFichero.showMovie()
-// lecturaFichero.printMovies() ¡¡¡¡¡esto falla!!!!
+// imdb1.printMovies()
+ //lecturaFichero.showMovie()
+ //lecturaFichero.printMovies() ¡¡¡¡¡esto falla!!!!
 
