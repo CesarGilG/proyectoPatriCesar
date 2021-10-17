@@ -42,6 +42,12 @@ let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
 
 const fs =require('fs')
 
-fs.writeFileSync('./imdbBBDD.json', JSON.stringify(imdb1));
+// fs.writeFileSync('./imdbBBDD.json', JSON.stringify(imdb1));
   
-  
+fs.writeFileSync("./imdb2.json",JSON.stringify(imdb1));
+
+
+let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+lecturaFichero.escribirEnFicheroJSON(" ")
+// imdb1.printMovies()
+// lecturaFichero.showMovie()

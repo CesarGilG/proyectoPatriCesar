@@ -34,7 +34,10 @@ movie3.setProducer("Dede Gardner");
 movie3.setDistributor("Paramount Pictures");
 var imdb1 = new Imdb_1.Imdb([movie1, movie2, movie3]);
 // imdb1.showMovie()
-// let imdbjson=JSON.stringify(imdb1)
-// console.log(imdbjson)
 var fs = require('fs');
-fs.writeFileSync('./imdbBBDD.json', JSON.stringify(JSON.stringify(imdb1)));
+// fs.writeFileSync('./imdbBBDD.json', JSON.stringify(imdb1));
+fs.writeFileSync("./imdb2.json", JSON.stringify(imdb1));
+var lecturaFichero = new Imdb_1.Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+lecturaFichero.escribirEnFicheroJSON(" ");
+// imdb1.printMovies()
+// lecturaFichero.showMovie()

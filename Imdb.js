@@ -11,6 +11,10 @@ var Imdb = /** @class */ (function () {
     Imdb.prototype.showMovie = function () {
         this.peliculas.forEach(function (pelicula) { return console.log(pelicula); });
     };
+    Imdb.prototype.escribirEnFicheroJSON = function (nombreFichero) {
+        var fs = require('fs');
+        fs.writeFileSync('./prueba4.json', JSON.stringify(this.peliculas));
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;
