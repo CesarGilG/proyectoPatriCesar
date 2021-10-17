@@ -39,8 +39,6 @@ movie3.setProducer("Dede Gardner")
 movie3.setDistributor("Paramount Pictures")
 
 let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
-
-
 const fs =require('fs')
 
 fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
