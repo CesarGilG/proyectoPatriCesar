@@ -18,6 +18,20 @@ var Imdb = /** @class */ (function () {
         var fs = require('fs');
         fs.writeFileSync("./" + nombreFichero + ".JSON", JSON.stringify(this.peliculas));
     };
+    Imdb.prototype.obtenerInstanciaIMDB = function (nombreFichero) {
+        var fs = require('fs');
+        if (fs.statSync("./").isFile(nombreFichero + ".JSON") == true) {
+            fs.readFileSync("./" + nombreFichero + ".JSON");
+            var imdbresultante = new Imdb((JSON.parse(fs.readFileSync("./" + nombreFichero + ".JSON"))));
+            return imdbresultante;
+        }
+        else {
+            this.escribirEnFicheroJSON(nombreFichero);
+            fs.readFileSync("./" + nombreFichero + ".JSON");
+            var imdbresultante = new Imdb((JSON.parse(fs.readFileSync("./" + nombreFichero + ".JSON"))));
+            return imdbresultante;
+        }
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;
