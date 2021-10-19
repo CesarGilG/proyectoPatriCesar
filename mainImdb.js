@@ -37,8 +37,9 @@ var imdb1 = new Imdb_1.Imdb([movie1, movie2, movie3]);
 var fs = require('fs');
 fs.writeFileSync("./imdb.json", JSON.stringify(imdb1));
 var lecturaFichero = new Imdb_1.Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
-lecturaFichero.escribirEnFicheroJSON("zzzotronombre");
-lecturaFichero.obtenerInstanciaIMDB("kkkotronombre").showMovie();
+console.log(lecturaFichero);
+// lecturaFichero.escribirEnFicheroJSON("imdbBBDD")
+lecturaFichero.obtenerInstanciaIMDB("imdbBBDD").showMovie();
 // imdb1.printMovies()
 //lecturaFichero.showMovie()
 //lecturaFichero.printMovies() ¡¡¡¡¡esto falla!!!!

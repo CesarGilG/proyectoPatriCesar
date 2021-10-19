@@ -1,3 +1,4 @@
+
 //import * as fs from "fs"
 
 import {movie} from "./movie"
@@ -45,9 +46,11 @@ fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
 
 
 let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
+// console.log(lecturaFichero)
 
-lecturaFichero.escribirEnFicheroJSON("zzzotronombre")
-lecturaFichero.obtenerInstanciaIMDB("kkkotronombre").showMovie()
+// lecturaFichero.escribirEnFicheroJSON("imdbBBDD")
+
+lecturaFichero.obtenerInstanciaIMDB("imdbBBDD").showMovie()
 
 
 
