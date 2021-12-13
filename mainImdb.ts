@@ -2,6 +2,7 @@
 
 import {movie} from "./movie"
 import {Imdb} from "./Imdb"
+const fs =require('fs')
 
 let movie1: movie = new movie ("The wolf of Wall Street",2013,"U.S","comedy")
 movie1.setActors(["Leonardo DiCaprio"," Margot Robie"])
@@ -39,19 +40,16 @@ movie3.setProducer("Dede Gardner")
 movie3.setDistributor("Paramount Pictures")
 
 let imdb1: Imdb = new Imdb ([movie1,movie2,movie3])
-const fs =require('fs')
+
 
 fs.writeFileSync("./imdb.json",JSON.stringify(imdb1));
 
 
 let lecturaFichero = new Imdb((JSON.parse(fs.readFileSync('./imdb.json'))).peliculas);
 
-lecturaFichero.escribirEnFicheroJSON("zzzotronombre")
-lecturaFichero.obtenerInstanciaIMDB("kkkotronombre").showMovie()
+lecturaFichero.escribirEnFicheroJSON("imdbBBDD")
+lecturaFichero.obtenerInstanciaIMDB("imdbBBDD").showMovie()
 
 
 
-// imdb1.printMovies()
- //lecturaFichero.showMovie()
- //lecturaFichero.printMovies() ¡¡¡¡¡esto falla!!!!
 

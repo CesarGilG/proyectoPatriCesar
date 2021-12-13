@@ -1,4 +1,5 @@
 import {movie} from "./movie"
+const fs =require('fs')
 
 export class Imdb{
     public peliculas: movie[]
@@ -17,23 +18,17 @@ showMovie(){
 length():number{
     return this.peliculas.length
 }
-escribirEnFicheroJSON(nombreFichero:string){
-    const fs =require('fs')
-    fs.writeFileSync("./" + nombreFichero +".JSON",JSON.stringify(this.peliculas));
+escribirEnFicheroJSON(nombreFichero:string){  
+    let pelicula = JSON.stringify(this.peliculas)
+    let archivo ="./" + nombreFichero +".JSON"
+    fs.writeFileSync(archivo,pelicula);
 }
 obtenerInstanciaIMDB(nombreFichero:string):Imdb{
-   var fs =require('fs')
-   if (fs.statSync("./").isFile(nombreFichero + ".JSON") == true){
-    fs.readFileSync("./" + nombreFichero +".JSON")
-    let imdbresultante:Imdb = new Imdb((JSON.parse(fs.readFileSync("./" + nombreFichero +".JSON"))))
+    let archivo = "./" + nombreFichero +".JSON"
+    let lectura = fs.readFileSync(archivo)
+    let imdbsalida = JSON.parse(lectura)
+    let imdbresultante:Imdb = new Imdb(imdbsalida)
     return imdbresultante
-    }else{
-    this.escribirEnFicheroJSON(nombreFichero)
-    fs.readFileSync("./" + nombreFichero +".JSON")
-    let imdbresultante:Imdb = new Imdb((JSON.parse(fs.readFileSync("./" + nombreFichero +".JSON"))))
-    return imdbresultante
-}
-
 }
 }
 
