@@ -25,6 +25,9 @@ var Imdb = /** @class */ (function () {
         var lectura = fs.readFileSync(archivo);
         var imdbsalida = JSON.parse(lectura);
         var imdbresultante = new Imdb(imdbsalida);
+        var fs = require('fs');
+        fs.readFileSync("./" + nombreFichero + ".JSON");
+        var imdbresultante = new Imdb((JSON.parse(fs.readFileSync("./" + nombreFichero + ".JSON"))).peliculas);
         return imdbresultante;
     };
     return Imdb;

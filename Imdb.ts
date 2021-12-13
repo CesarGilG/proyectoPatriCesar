@@ -28,8 +28,9 @@ obtenerInstanciaIMDB(nombreFichero:string):Imdb{
     let lectura = fs.readFileSync(archivo)
     let imdbsalida = JSON.parse(lectura)
     let imdbresultante:Imdb = new Imdb(imdbsalida)
-    return imdbresultante
-}
+    return imdbresultante}
+
+
 }
 
 
